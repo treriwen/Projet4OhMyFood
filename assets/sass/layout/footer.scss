@@ -1,0 +1,55 @@
+footer {
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 30px 25px;
+    gap: 16px;
+    background: $gris-sombre;
+    color: $txt-fond-sombre;
+
+    @media (min-width: $layout-breakpoint-medium) {
+        flex-direction: row-reverse;
+    }
+
+    @media (min-width: $layout-breakpoint-large) {
+        flex-direction: row-reverse;
+    }
+
+
+    & h2 {
+        font-family: 'Shrikhand', cursive;
+    }
+
+    & ul {
+        @media (min-width: $layout-breakpoint-medium) {
+            display: flex;
+            gap: 5px;
+        }
+
+        @media (min-width: $layout-breakpoint-large) {
+            display: flex;
+            gap: 20px;
+            margin-right: 20px;
+        }
+
+
+        & li {
+            margin-bottom: 10px;
+
+            & a {
+                font-family: 'Roboto';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 19px;
+                color: $txt-fond-sombre;
+
+                & i {
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+
+}

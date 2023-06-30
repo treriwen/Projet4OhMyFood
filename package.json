@@ -1,0 +1,12 @@
+{
+  "name": "p3_ohmyfood",
+  "version": "1.0.0",
+  "description": "P3_Ohmyfood",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./assets/sass/index.scss:assets/css/index.css --no-source-map",
+    "prefix": "postcss assets/css/index.css --use autoprefixer"
+  },
+  "author": "",
+  "license": "ISC"
+}

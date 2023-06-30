@@ -1,0 +1,22 @@
+.button {
+    padding: 1em 1.5em;
+    color: $txt-fond-sombre;
+    transition: 250ms;
+    max-width: 186px;
+
+    &--gradient {
+        background-image: radial-gradient(100% 50% at 20% 10%,
+                $rose-secondaire 0%,
+                $violet-primaire 200%);
+    }
+
+    &--radius {
+        border-radius: 2em;
+    }
+
+    &:hover {
+        opacity: 0.8;
+        box-shadow: 0 4px 11px rgba(0, 0, 0, 0.2);
+    }
+
+}

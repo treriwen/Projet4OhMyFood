@@ -1,0 +1,17 @@
+header {
+    @extend %grid-center;
+    @include grid-template-columns(1);
+    padding: 1em;
+
+    & a {
+        grid-row: 1/auto;
+        grid-column: 1/auto;
+        justify-self: start;
+    }
+
+    & h1 {
+        font-family: 'Shrikhand', cursive;
+        grid-row: 1/auto;
+        grid-column: 1/auto;
+    }
+}

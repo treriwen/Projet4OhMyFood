@@ -1,0 +1,191 @@
+.main-acceuil {
+    font-family: 'Roboto', sans-serif;
+
+    & .SectionLieux {
+        @extend %grid-center;
+        padding: 1em;
+        background: linear-gradient(180deg,
+                rgba(173, 173, 173, .35) 0%,
+                rgba(234, 234, 234, .75) 15%,
+                rgba(234, 234, 234, 1) 100%);
+
+        & h2 {
+            font-size: 16px;
+            color: $gris-sombre;
+        }
+
+        & i {
+            padding: 0 17px 0 0;
+        }
+    }
+
+    & .SectionPresentation {
+        @extend %grid-center;
+        padding: 2em 0 3em;
+        background: #f6f6f6;
+        text-align: center;
+
+        & h2 {
+            padding: 0 3em;
+        }
+
+        & p {
+            padding: 1em 3.5em 2em;
+        }
+
+        & a {
+            width: 50%;
+            margin: auto;
+        }
+    }
+
+    & .SectionFonctionnement {
+        @extend %grid-center;
+        @include grid-template-columns(1);
+        padding: 3em 1em;
+
+        & h2 {
+            justify-self: start;
+        }
+
+        & ul {
+            display: grid;
+            @include grid-template-columns(1);
+            grid-gap: 2em;
+            margin: 1em 1em 0;
+            justify-self: normal;
+            text-align: center;
+            counter-reset: lesli;
+
+            @media (min-width: $layout-breakpoint-medium) {
+                @include grid-template-columns(2);
+            }
+
+            @media (min-width: $layout-breakpoint-large) {
+                @include grid-template-columns(3);
+            }
+
+            & li {
+
+                & p {
+                    display: inline-block;
+                    position: relative;
+                    left: -0.7em;
+
+                    & i {
+                        padding: 0 1em 0 0;
+                    }
+                }
+            }
+
+            & li::before {
+                counter-increment: lesli;
+                content: counter(lesli);
+                position: relative;
+                left: -1.9em;
+                padding: 0.3em 0.6em;
+                border-radius: 70%;
+                background-color: $violet-primaire;
+                color: $txt-fond-sombre;
+            }
+
+            & li:hover {
+                background-color: lighten($violet-primaire, 35%);
+
+                & i {
+                    color: $violet-primaire;
+                }
+            }
+        }
+    }
+
+    & .SectionRestaurant {
+        @extend %grid-center;
+        @include grid-template-columns(1);
+        padding: 3em 1em;
+        background: #f6f6f6;
+
+        & ul {
+            display: grid;
+            @include grid-template-columns(1);
+            grid-gap: 2em;
+            margin: 1em 0;
+            width: 100%;
+
+            @media (min-width: $layout-breakpoint-medium) {
+                @include grid-template-columns(1);
+            }
+
+            @media (min-width: $layout-breakpoint-large) {
+                @include grid-template-columns(2);
+            }
+
+            & li {
+                width: 100%;
+
+
+
+                & article {
+                    border-radius: 15px;
+                    overflow: hidden;
+                    position: relative;
+                    box-shadow: 0 3px 10px rgb(0, 0, 0, 0.2);
+
+                    & .BoxNew {
+                        position: absolute;
+                        width: 80px;
+                        height: 29px;
+                        background: #99E2D0;
+
+                        /* Shadow/Badge */
+                        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+                        border-radius: 2px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-family: 'Roboto';
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 14px;
+                        line-height: 16px;
+                        text-align: center;
+                        color: $txt-fond-vert;
+                        margin-top: 10px;
+                        right: 25px;
+
+                    }
+
+                    & .BoxImg {
+                        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+                        height: 12em;
+
+                        & a {
+
+                            & img {
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                            }
+
+                        }
+                    }
+
+                    & .BoxInfo {
+                        padding: 13px;
+                        color: $txt-fond-clair;
+                        background-color: white;
+
+                        & span {
+                            position: absolute;
+                            bottom: 20px;
+                            right: 25px;
+                            font-size: 20px;
+                        }
+
+                    }
+                }
+
+            }
+        }
+    }
+}

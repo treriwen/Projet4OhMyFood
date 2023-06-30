@@ -1,0 +1,201 @@
+.main-restaurant {
+    font-family: 'Roboto', sans-serif;
+
+    & section {
+        @extend %grid-center;
+        @include grid-template-columns(1);
+
+        & img {
+            width: 100%;
+            margin-bottom: -50px;
+            height: 27rem;
+            object-fit: cover;
+        }
+
+        & .carte {
+            @extend %grid-center;
+            @include grid-template-columns(1);
+            background-color: $gris-clair;
+            border-radius: 40px 40px 0px 0px;
+            padding-top: 40px;
+            width: 100%;
+
+
+            @media (min-width: $layout-breakpoint-medium) {
+                width: 85%;
+                margin: auto;
+            }
+
+            @media (min-width: $layout-breakpoint-large) {
+                width: 85%;
+                margin: auto;
+            }
+
+
+            & h2 {
+                font-family: 'Shrikhand', cursive;
+                margin-bottom: 40px;
+                display: flex;
+                justify-content: space-between;
+                margin: 0px auto;
+                position: relative;
+
+                & span {
+                    & .heartVide {
+                        margin-right: 40px;
+                        font-size: 22px;
+                        padding-left: 24px;
+                    }
+
+                    & .heartPlein {
+                        margin-right: 40px;
+                        font-size: 22px;
+                        padding-left: 24px;
+                    }
+                }
+            }
+
+            & h3 {
+                font-family: 'Roboto';
+                font-style: normal;
+                font-weight: 300;
+                font-size: 16px;
+                line-height: 19px;
+                text-transform: uppercase;
+                margin-bottom: 15px;
+
+
+            }
+
+            & h3::after {
+                display: block;
+                content: '';
+                width: 3em;
+                border-bottom: 3px $vert-clair solid;
+            }
+
+            & ul {
+                max-width: 634px;
+                width: 80%;
+                margin-top: 40px;
+
+                &.last-menu {
+                    margin-bottom: 40px;
+                }
+
+
+                & .list {
+
+                    overflow: hidden;
+                    position: relative;
+                    margin: 12px auto;
+                    padding: 12px;
+                    display: flex;
+                    flex-direction: column;
+                    max-width: 634px;
+                    background-color: white;
+
+                    animation: display-plat 1000ms forwards;
+                    opacity: 0;
+
+                    @for $i from 1 to 10 {
+                        &--#{$i} {
+                            animation-delay: 100ms * $i;
+                        }
+                    }
+
+                    &:hover {
+                        & span {
+                            right: 0em;
+                        }
+
+                        & .fa-check-circle {
+                            transform: rotate(0deg);
+                        }
+
+                        & strong {
+                            right: 6.5rem;
+                        }
+
+                        & p {
+                            width: 60%;
+                        }
+
+                        & h4 {
+                            width: 65%;
+                        }
+                    }
+
+                    & h4 {
+
+                        font-family: 'Roboto';
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 18px;
+                        line-height: 21px;
+                        margin-bottom: 5px;
+
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        transition: all 0.5s;
+                        width: 85%;
+
+                    }
+
+                    & p {
+                        font-family: 'Roboto';
+                        font-style: normal;
+                        font-weight: 200;
+                        font-size: 15.0431px;
+                        line-height: 18px;
+
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        transition: all 0.5s;
+                        width: 75%;
+                    }
+
+                    & strong {
+                        position: absolute;
+                        right: 2rem;
+                        bottom: 1em;
+                        transition: all 0.5s;
+                    }
+
+
+                    & span {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        position: absolute;
+                        right: -5em;
+                        height: 100%;
+                        width: 5em;
+                        background-color: #99E2D0;
+                        bottom: 0px;
+                        transition: all 0.5s;
+
+                        & .fa-check-circle {
+                            font-size: 22px;
+                            color: white;
+                            transition: all 0.5s;
+                            transform: rotate(-360deg);
+
+                        }
+
+                    }
+                }
+            }
+        }
+
+        & .button {
+            width: 40%;
+            margin: auto;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+    }
+}
