@@ -112,26 +112,33 @@ button:hover .heartPlein {
   transform: scale(1);
 }
 
-.loader {
+.absolute-loader {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.absolute-loader .loader {
   position: fixed;
   z-index: 1;
   height: 100%;
   width: 100%;
   background-color: white;
-  animation: 1s displaynoneloader 1000000ms ease forwards;
+  animation: 1s displaynoneloader 5000ms ease forwards;
   margin: 0px auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-.loader .loader-box {
+.absolute-loader .loader .loader-box {
   width: 48px;
   height: 48px;
   margin: 50px;
   position: relative;
 }
-.loader .loader-box:before {
+.absolute-loader .loader .loader-box:before {
   content: "";
   width: 48px;
   height: 5px;
@@ -142,7 +149,7 @@ button:hover .heartPlein {
   border-radius: 50%;
   animation: shadow324 0.5s linear infinite;
 }
-.loader .loader-box:after {
+.absolute-loader .loader .loader-box:after {
   content: "";
   width: 100%;
   height: 100%;
@@ -153,21 +160,21 @@ button:hover .heartPlein {
   border-radius: 4px;
   animation: jump7456 0.5s linear infinite;
 }
-.loader .loader-texte {
+.absolute-loader .loader .loader-texte {
   position: relative;
 }
-.loader .loader-texte span {
+.absolute-loader .loader .loader-texte span {
   position: absolute;
   color: #fff;
   transform: translate(-50%, -50%);
   font-size: 38px;
   letter-spacing: 5px;
 }
-.loader .loader-texte span:nth-child(1) {
+.absolute-loader .loader .loader-texte span:nth-child(1) {
   color: transparent;
   -webkit-text-stroke: 0.3px rgb(128, 198, 255);
 }
-.loader .loader-texte span:nth-child(2) {
+.absolute-loader .loader .loader-texte span:nth-child(2) {
   color: rgb(128, 198, 255);
   -webkit-text-stroke: 1px rgb(128, 198, 255);
   animation: uiverse723 3s ease-in-out infinite;
