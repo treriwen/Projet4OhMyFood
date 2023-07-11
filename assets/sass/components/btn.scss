@@ -3,6 +3,7 @@
     color: $txt-fond-sombre;
     transition: 250ms;
     max-width: 186px;
+    position: relative;
 
     &--gradient {
         background-image: radial-gradient(100% 50% at 20% 10%,

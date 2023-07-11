@@ -69,6 +69,7 @@
   color: #ffffff;
   transition: 250ms;
   max-width: 186px;
+  position: relative;
 }
 .button--gradient {
   background-image: radial-gradient(100% 50% at 20% 10%, #FF79DA 0%, #9356DC 200%);
@@ -227,6 +228,7 @@ header h1 {
 .main-acceuil .SectionFonctionnement {
   grid-template-columns: repeat(1, 1fr);
   padding: 3em 1em;
+  position: relative;
 }
 .main-acceuil .SectionFonctionnement h2 {
   justify-self: start;
@@ -386,17 +388,13 @@ header h1 {
   margin: 0px auto;
   position: relative;
 }
-.main-restaurant section .carte h2 span .heartVide {
-  margin-right: 40px;
-  font-size: 22px;
-  padding-left: 24px;
+.main-restaurant section .carte h2 span {
+  position: absolute;
+  bottom: 2px;
+  right: -40px;
+  font-size: 20px;
 }
-.main-restaurant section .carte h2 span .heartPlein {
-  margin-right: 40px;
-  font-size: 22px;
-  padding-left: 24px;
-}
-.main-restaurant section .carte h3 {
+.main-restaurant section .carte h2 h3 {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 300;
@@ -405,21 +403,21 @@ header h1 {
   text-transform: uppercase;
   margin-bottom: 15px;
 }
-.main-restaurant section .carte h3::after {
+.main-restaurant section .carte .div_menu {
+  max-width: 634px;
+  width: 80%;
+  margin-top: 40px;
+}
+.main-restaurant section .carte .div_menu h3::after {
   display: block;
   content: "";
   width: 3em;
   border-bottom: 3px #99e2d0 solid;
 }
-.main-restaurant section .carte ul {
-  max-width: 634px;
-  width: 80%;
-  margin-top: 40px;
-}
-.main-restaurant section .carte ul.last-menu {
+.main-restaurant section .carte .div_menu ul.last-menu {
   margin-bottom: 40px;
 }
-.main-restaurant section .carte ul .list {
+.main-restaurant section .carte .div_menu ul .list {
   overflow: hidden;
   position: relative;
   margin: 12px auto;
@@ -431,49 +429,49 @@ header h1 {
   animation: display-plat 1000ms forwards;
   opacity: 0;
 }
-.main-restaurant section .carte ul .list--1 {
+.main-restaurant section .carte .div_menu ul .list--1 {
   animation-delay: 100ms;
 }
-.main-restaurant section .carte ul .list--2 {
+.main-restaurant section .carte .div_menu ul .list--2 {
   animation-delay: 200ms;
 }
-.main-restaurant section .carte ul .list--3 {
+.main-restaurant section .carte .div_menu ul .list--3 {
   animation-delay: 300ms;
 }
-.main-restaurant section .carte ul .list--4 {
+.main-restaurant section .carte .div_menu ul .list--4 {
   animation-delay: 400ms;
 }
-.main-restaurant section .carte ul .list--5 {
+.main-restaurant section .carte .div_menu ul .list--5 {
   animation-delay: 500ms;
 }
-.main-restaurant section .carte ul .list--6 {
+.main-restaurant section .carte .div_menu ul .list--6 {
   animation-delay: 600ms;
 }
-.main-restaurant section .carte ul .list--7 {
+.main-restaurant section .carte .div_menu ul .list--7 {
   animation-delay: 700ms;
 }
-.main-restaurant section .carte ul .list--8 {
+.main-restaurant section .carte .div_menu ul .list--8 {
   animation-delay: 800ms;
 }
-.main-restaurant section .carte ul .list--9 {
+.main-restaurant section .carte .div_menu ul .list--9 {
   animation-delay: 900ms;
 }
-.main-restaurant section .carte ul .list:hover span {
+.main-restaurant section .carte .div_menu ul .list:hover span {
   right: 0em;
 }
-.main-restaurant section .carte ul .list:hover .fa-check-circle {
+.main-restaurant section .carte .div_menu ul .list:hover .fa-check-circle {
   transform: rotate(0deg);
 }
-.main-restaurant section .carte ul .list:hover strong {
+.main-restaurant section .carte .div_menu ul .list:hover strong {
   right: 6.5rem;
 }
-.main-restaurant section .carte ul .list:hover p {
+.main-restaurant section .carte .div_menu ul .list:hover p {
   width: 60%;
 }
-.main-restaurant section .carte ul .list:hover h4 {
+.main-restaurant section .carte .div_menu ul .list:hover h4 {
   width: 65%;
 }
-.main-restaurant section .carte ul .list h4 {
+.main-restaurant section .carte .div_menu ul .list h4 {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
@@ -486,7 +484,7 @@ header h1 {
   transition: all 0.5s;
   width: 85%;
 }
-.main-restaurant section .carte ul .list p {
+.main-restaurant section .carte .div_menu ul .list p {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 200;
@@ -498,13 +496,13 @@ header h1 {
   transition: all 0.5s;
   width: 75%;
 }
-.main-restaurant section .carte ul .list strong {
+.main-restaurant section .carte .div_menu ul .list strong {
   position: absolute;
   right: 2rem;
   bottom: 1em;
   transition: all 0.5s;
 }
-.main-restaurant section .carte ul .list span {
+.main-restaurant section .carte .div_menu ul .list span {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -516,7 +514,7 @@ header h1 {
   bottom: 0px;
   transition: all 0.5s;
 }
-.main-restaurant section .carte ul .list span .fa-check-circle {
+.main-restaurant section .carte .div_menu ul .list span .fa-check-circle {
   font-size: 22px;
   color: white;
   transition: all 0.5s;
